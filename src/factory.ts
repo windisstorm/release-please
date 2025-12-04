@@ -40,6 +40,7 @@ import {R} from './strategies/r';
 import {Ruby} from './strategies/ruby';
 import {RubyYoshi} from './strategies/ruby-yoshi';
 import {Rust} from './strategies/rust';
+import {RustMonorepo} from './strategies/rust-monorepo';
 import {Sfdx} from './strategies/sfdx';
 import {Simple} from './strategies/simple';
 import {TerraformModule} from './strategies/terraform-module';
@@ -103,6 +104,7 @@ const releasers: Record<string, ReleaseBuilder> = {
   ruby: options => new Ruby(options),
   'ruby-yoshi': options => new RubyYoshi(options),
   rust: options => new Rust(options),
+  'rust-monorepo': options => new RustMonorepo(options),
   salesforce: options => new Sfdx(options),
   sfdx: options => new Sfdx(options),
   simple: options => new Simple(options),

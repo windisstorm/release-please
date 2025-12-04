@@ -40,6 +40,7 @@ export interface TargetDependencies {
 
 export interface CargoWorkspace {
   members?: string[];
+  package?: CargoPackage;
 }
 
 export interface CargoPackage {

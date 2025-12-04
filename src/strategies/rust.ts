@@ -152,7 +152,7 @@ export class Rust extends BaseStrategy {
     return this.packageManifest;
   }
 
-  private async getContent(path: string): Promise<GitHubFileContents | null> {
+  protected async getContent(path: string): Promise<GitHubFileContents | null> {
     try {
       return await this.github.getFileContentsOnBranch(
         this.addPath(path),
